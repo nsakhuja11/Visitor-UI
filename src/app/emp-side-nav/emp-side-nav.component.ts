@@ -2,19 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Time } from '@angular/common';
 
 @Component({
-  selector: 'app-side-nav',
-  templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.css']
+  selector: 'app-emp-side-nav',
+  templateUrl: './emp-side-nav.component.html',
+  styleUrls: ['./emp-side-nav.component.css']
 })
-export class SideNavComponent implements OnInit {
+export class EmpSideNavComponent implements OnInit {
 
   nameIsCollapsed : boolean = true;
-  purposeIsCollapsed : boolean = true;
-  meatingIsCollapsed : boolean = true;
+  idIsCollapsed : boolean = true;
   dateIsCollapsed : boolean = true;
   dateNameIsCollapsed : boolean = true;
   name : string = "";
-  purpose : string = "";
+  id : number;
   fromDate : Date;
   toDate : Date;
   fromTime: Time;
@@ -24,23 +23,13 @@ export class SideNavComponent implements OnInit {
 
   nameToggleCollapse() {
     this.nameIsCollapsed = !this.nameIsCollapsed;
-    this.purposeIsCollapsed = true;
-    this.meatingIsCollapsed = true;
+    this.idIsCollapsed = true;
     this.dateIsCollapsed = true;
     this.dateNameIsCollapsed = true;
   }
 
-  purposeToggleCollapse() {
-    this.purposeIsCollapsed = !this.purposeIsCollapsed;
-    this.nameIsCollapsed = true;
-    this.meatingIsCollapsed = true;
-    this.dateIsCollapsed = true;
-    this.dateNameIsCollapsed = true;
-  }
-
-  meatingToggleCollapse() {
-    this.meatingIsCollapsed = !this.meatingIsCollapsed;
-    this.purposeIsCollapsed = true;
+  idToggleCollapse() {
+    this.idIsCollapsed = !this.idIsCollapsed;
     this.nameIsCollapsed = true;
     this.dateIsCollapsed = true;
     this.dateNameIsCollapsed = true;
@@ -48,29 +37,23 @@ export class SideNavComponent implements OnInit {
 
   dateToggleCollapse() {
     this.dateIsCollapsed = !this.dateIsCollapsed;
-    this.purposeIsCollapsed = true;
     this.nameIsCollapsed = true;
-    this.meatingIsCollapsed = true;
+    this.idIsCollapsed = true;
     this.dateNameIsCollapsed = true;
   }
 
   dateNameToggleCollapse() {
     this.dateNameIsCollapsed = !this.dateNameIsCollapsed;
     this.nameIsCollapsed = true;
-    this.purposeIsCollapsed = true;
-    this.meatingIsCollapsed = true;
+    this.idIsCollapsed = true;
     this.dateIsCollapsed = true;
   }
 
-  getByVisitorName() {
+  getByEmployeeName() {
 
   }
 
-  getByPurpose() {
-
-  }
-
-  getByMeatingPersonName() {
+  getById() {
 
   }
 

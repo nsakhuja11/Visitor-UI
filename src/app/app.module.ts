@@ -12,6 +12,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DisplayComponent } from './display/display.component';
+import { EmpSideNavComponent } from './emp-side-nav/emp-side-nav.component';
+import { GaurdSideNavComponent } from './gaurd-side-nav/gaurd-side-nav.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { DisplayComponent } from './display/display.component';
     HeaderComponent,
     NavComponent,
     SideNavComponent,
-    DisplayComponent
+    DisplayComponent,
+    EmpSideNavComponent,
+    GaurdSideNavComponent
   ],
   imports: [
     BrowserModule,
